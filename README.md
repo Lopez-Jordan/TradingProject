@@ -174,31 +174,6 @@ This confirms the signal has predictive power *in isolation*.
 
 ---
 
-## Key Interview Talking Points
-
-**"Why does the signal decay with latency?"**
-> By the time a 50ms-latency trader acts on an imbalance signal, the ~50ms of
-> order flow at the top of the book has already repriced the asset. You're buying
-> at a price that already reflects the signal you saw — your edge is gone.
-
-**"What would make this strategy viable?"**
-> Co-location (< 1ms latency), better fill assumptions (limit orders instead of
-> market orders), tighter signal filters (higher threshold + OFI confirmation),
-> and capital to absorb the fixed costs of low-latency infrastructure.
-
-**"How is this different from a real HFT strategy?"**
-> Real HFT adds: queue position modeling, adverse selection filtering, dynamic
-> position sizing, multi-asset correlation signals, and nanosecond-level
-> execution. This project demonstrates the *foundational concepts* — the
-> microstructure awareness and latency sensitivity — that underpin all of it.
-
-**"What are the limitations of this backtest?"**
-> Fill assumptions (assumes instant market order fill at quoted price), no market
-> impact, no queue uncertainty, no adverse selection beyond latency slippage,
-> and synthetic data may not fully replicate real microstructure regime changes.
-
----
-
 ## References
 
 - Cont, Kukanov, Stoikov (2014) — *The Price Impact of Order Book Events*
