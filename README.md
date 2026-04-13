@@ -4,8 +4,6 @@ A production-quality Node.js project demonstrating a short-horizon trading signa
 using **Order Book Imbalance**, and proving that its profitability collapses under
 realistic execution constraints (spread cost + latency).
 
-Built to demonstrate market microstructure awareness for HFT/quant trading roles.
-
 ---
 
 ## Hypothesis
