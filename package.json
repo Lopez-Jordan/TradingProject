@@ -1,0 +1,14 @@
+{
+  "name": "hft-orderbook-signal",
+  "version": "1.0.0",
+  "description": "Order Book Imbalance Signal with Execution Realism — HFT Demo",
+  "scripts": {
+    "monitor":  "node scripts/liveMonitor.js",
+    "collect":  "node scripts/collectData.js",
+    "generate": "node scripts/generateSyntheticData.js",
+    "backtest": "node scripts/runBacktest.js"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  }
+}

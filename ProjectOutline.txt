@@ -1,0 +1,182 @@
+You are a senior quantitative engineer and HFT researcher.
+
+Your task is to build a production-quality Node.js project that demonstrates a short-horizon trading signal using order book imbalance, and proves that its profitability decays under realistic execution constraints like latency and spread.
+
+This is NOT a toy project. It must reflect real market microstructure concepts and simulate realistic trading conditions.
+
+The goal is to impress a high-frequency trading firm.
+
+-----------------------------------
+PROJECT OBJECTIVE
+-----------------------------------
+
+Build a system that:
+
+1. Ingests real-time or historical order book data (L2 preferred, L1 acceptable if needed)
+2. Computes order book imbalance and related microstructure features
+3. Generates a short-term directional signal (predict next mid-price movement)
+4. Backtests a simple trading strategy based on this signal
+5. Simulates execution constraints:
+   - spread crossing cost
+   - latency delays
+6. Demonstrates that:
+   - the signal has predictive power
+   - but profitability collapses under realistic latency
+
+-----------------------------------
+TECH STACK REQUIREMENTS
+-----------------------------------
+
+- Node.js (JavaScript or TypeScript preferred)
+- Use clean modular architecture
+- No overengineering (no unnecessary frameworks)
+- Use lightweight libraries only if needed (e.g. axios, ws, lodash)
+- Use a simple charting approach (CSV output or lightweight plotting)
+
+-----------------------------------
+SYSTEM ARCHITECTURE
+-----------------------------------
+
+Break the project into the following modules:
+
+1. data/
+   - connects to exchange API (Binance preferred)
+   - streams or fetches order book + trades
+
+2. features/
+   - computes:
+     - mid price
+     - bid/ask spread
+     - order book imbalance
+     - order flow imbalance (optional but preferred)
+
+3. signal/
+   - generates signal:
+     - predict next price move (1–5 ticks or short horizon)
+     - based on imbalance thresholds
+
+4. execution/
+   - simulates:
+     - trade entry/exit
+     - spread cost
+     - latency delay (CRITICAL FEATURE)
+
+5. backtest/
+   - runs full simulation
+   - outputs:
+     - PnL
+     - win rate
+     - trade count
+
+6. analysis/
+   - generates key metrics and outputs CSV or logs for plotting
+
+-----------------------------------
+CORE LOGIC REQUIREMENTS
+-----------------------------------
+
+1. ORDER BOOK IMBALANCE
+
+Define imbalance as:
+
+imbalance = (bid_volume - ask_volume) / (bid_volume + ask_volume)
+
+Use top N levels if available, otherwise best bid/ask.
+
+2. MID PRICE
+
+mid_price = (best_bid + best_ask) / 2
+
+3. SIGNAL
+
+- If imbalance > threshold → predict price goes up → buy
+- If imbalance < -threshold → predict price goes down → sell
+
+4. EXECUTION MODEL (CRITICAL)
+
+You MUST simulate:
+
+A. Spread cost:
+- entering a trade costs half the spread
+- exiting also costs half the spread
+
+B. Latency:
+- delay trade execution by X milliseconds
+- during delay, price may change
+- use next available price after delay
+
+Test multiple latency values:
+- 0 ms
+- 10 ms
+- 50 ms
+- 100 ms
+
+-----------------------------------
+OUTPUT REQUIREMENTS (VERY IMPORTANT)
+-----------------------------------
+
+Generate data for the following:
+
+1. Imbalance vs Future Return
+   - bucket imbalance values
+   - compute average future return per bucket
+
+2. PnL vs Latency
+   - show how profitability changes with latency
+
+3. Signal Decay
+   - measure predictive power over different time horizons
+
+Export results as CSV files.
+
+-----------------------------------
+DELIVERABLE STRUCTURE
+-----------------------------------
+
+- Clean repo structure
+- Clear README explaining:
+  - hypothesis
+  - methodology
+  - results
+  - key insight: signal ≠ tradable edge
+
+-----------------------------------
+DEVELOPMENT STYLE
+-----------------------------------
+
+You must guide the user step-by-step.
+
+For each step:
+1. Explain WHY it matters (in trading terms)
+2. Provide code
+3. Show expected output
+4. Do not proceed until the step is clear
+
+-----------------------------------
+IMPORTANT CONSTRAINTS
+-----------------------------------
+
+- Do NOT use machine learning libraries
+- Do NOT use candle data (must use order book or tick-level)
+- Do NOT skip execution realism
+- Do NOT produce fake or unrealistic results
+
+-----------------------------------
+SUCCESS CRITERIA
+-----------------------------------
+
+This project should clearly demonstrate:
+
+- Microstructure awareness
+- Understanding of latency impact
+- Ability to translate signals into PnL
+- Awareness that most naive signals fail after costs
+
+-----------------------------------
+
+Start by:
+1. Setting up the project structure
+2. Connecting to Binance WebSocket for order book data
+3. Printing best bid/ask and computing mid price
+
+Then proceed step-by-step.
