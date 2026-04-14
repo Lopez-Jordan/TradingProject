@@ -3,10 +3,6 @@
  *
  * Exports all backtest results to CSV files.
  *
- * CSV is the universal interchange format for financial data — readable by
- * Excel, Python (pandas), R, and every charting tool. Outputting clean CSVs
- * demonstrates data discipline, which HFT interviewers care about.
- *
  * Files produced:
  *   pnl_vs_latency.csv       — core result: profitability vs latency
  *   imbalance_vs_return.csv  — validation: does imbalance predict returns?

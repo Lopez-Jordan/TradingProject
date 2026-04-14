@@ -2,7 +2,7 @@
  * metrics.js
  *
  * ─────────────────────────────────────────────────────────────────────────────
- * WHY THESE METRICS — for the HFT interview
+ * WHY THESE METRICS
  * ─────────────────────────────────────────────────────────────────────────────
  * HFT metrics differ from traditional portfolio metrics. Key ones:
  *

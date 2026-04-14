@@ -2,7 +2,7 @@
  * generateSyntheticData.js
  *
  * ─────────────────────────────────────────────────────────────────────────────
- * WHY SYNTHETIC DATA — for the HFT interview
+ * WHY SYNTHETIC DATA
  * ─────────────────────────────────────────────────────────────────────────────
  * Before testing on real markets, quants ALWAYS test on synthetic data with
  * KNOWN properties. This serves two purposes:

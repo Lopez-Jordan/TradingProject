@@ -2,7 +2,7 @@
  * collectData.js
  *
  * ─────────────────────────────────────────────────────────────────────────────
- * WHY COLLECT REAL DATA — for the HFT interview
+ * WHY COLLECT REAL DATA
  * ─────────────────────────────────────────────────────────────────────────────
  * Synthetic data proves your code is correct. Real data proves your strategy
  * is relevant to actual markets. The differences matter:

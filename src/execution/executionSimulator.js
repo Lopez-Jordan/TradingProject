@@ -2,10 +2,8 @@
  * executionSimulator.js
  *
  * ─────────────────────────────────────────────────────────────────────────────
- * WHY THIS IS THE MOST IMPORTANT MODULE — for the HFT interview
+ * WHY THIS IS THE MOST IMPORTANT MODULE
  * ─────────────────────────────────────────────────────────────────────────────
- * Most naive backtests assume you trade at the mid price, instantly.
- * This is completely unrealistic. Here's what actually happens:
  *
  * ┌──────────────────────────────────────────────────────────────────────┐
  * │  COST 1: SPREAD CROSSING                                             │

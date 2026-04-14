@@ -2,7 +2,7 @@
  * signalGenerator.js
  *
  * ─────────────────────────────────────────────────────────────────────────────
- * WHY A SIGNAL LAYER — for the HFT interview
+ * WHY A SIGNAL LAYER
  * ─────────────────────────────────────────────────────────────────────────────
  * Raw features (imbalance, OFI) are just numbers. A SIGNAL is a DECISION:
  * buy, sell, or do nothing.
@@ -16,13 +16,7 @@
  * intentional. Many real HFT signals at very short horizons (< 1 second) are
  * essentially this: a carefully chosen threshold on a microstructure feature.
  *
- * The value of this project is NOT in having a fancy signal — it's in showing
- * that you understand WHY the signal decays when execution costs are added.
  *
- * KEY QUESTION you'll be asked in interviews:
- *   "If you found a predictive signal, why can't you just trade it?"
- * Answer: "Because once you add spread cost and latency, the edge disappears.
- *          The signal ≠ a tradable edge." — this project proves that.
  * ─────────────────────────────────────────────────────────────────────────────
  */
 

@@ -2,7 +2,7 @@
  * backtestEngine.js
  *
  * ─────────────────────────────────────────────────────────────────────────────
- * WHY BACKTEST — for the HFT interview
+ * WHY BACKTEST
  * ─────────────────────────────────────────────────────────────────────────────
  * A backtest answers: "If I had run this strategy on historical data, what
  * would have happened?" It's how quants validate (or reject) ideas before

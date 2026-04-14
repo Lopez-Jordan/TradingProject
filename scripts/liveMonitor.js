@@ -4,8 +4,7 @@
  * Real-time order book terminal dashboard.
  *
  * Connects to Binance, computes features on every tick, and prints a live
- * updating display. Great for understanding what the order book actually
- * looks like in motion — and for demo purposes in interviews.
+ * updating display.
  *
  * USAGE: npm run monitor
  *

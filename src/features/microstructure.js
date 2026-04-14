@@ -2,7 +2,7 @@
  * microstructure.js
  *
  * ─────────────────────────────────────────────────────────────────────────────
- * WHY THESE FEATURES — for the HFT interview
+ * WHY THESE FEATURES
  * ─────────────────────────────────────────────────────────────────────────────
  * Market microstructure is the study of HOW trading actually happens at a
  * microscopic level. HFT firms care about this because the order book contains
